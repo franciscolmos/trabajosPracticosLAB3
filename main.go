@@ -32,6 +32,8 @@ func main(){
 		break
 	case 6:
 		tp6_calculadora_hilos.CalculadoraHilos()
+		var input string
+		fmt.Scan(&input)
 		break
 	case 7:
 		tp7_calculadora_test.CalculadoraTest()

@@ -27,14 +27,14 @@ func CalculadoraHilos() {
 	var offset int
 
 	fmt.Printf("Ingrese dos operandos: \n")
-	fmt.Scanln(&num1, &num2)
+	fmt.Scan(&num1, &num2)
 	operandos = []float64{num1, num2}
 	fmt.Printf("Desea buguear la calculadora?: (S/N)")
-	fmt.Scanln(&respuesta)
+	fmt.Scan(&respuesta)
 	if (respuesta == "S") {
 		bug = true
 		fmt.Printf("Ingrese OFFSET del Bug:")
-		fmt.Scanln(&offset)
+		fmt.Scan(&offset)
 	}
 
 	go func() {
@@ -83,7 +83,6 @@ func CalculadoraHilos() {
 			Resultado: resultado,
 		}
 		time.Sleep(time.Second * 2)
-
 	}()
 
 	go func() {
@@ -100,7 +99,6 @@ func CalculadoraHilos() {
 			Resultado: resultado,
 		}
 		time.Sleep(time.Second * 2)
-
 	}()
 
 	go func() {
@@ -117,7 +115,4 @@ func CalculadoraHilos() {
 			}
 		}
 	}()
-
-	var input string
-	fmt.Scanln(&input)
 }
