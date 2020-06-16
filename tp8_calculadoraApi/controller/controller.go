@@ -13,8 +13,8 @@ func Sumar(c *gin.Context) {
 		c.String(400, "Missing params a,b")
 		return
 	}
-	num1, error1 := strconv.ParseInt(a, 10, 64)
-	num2, error2 := strconv.ParseInt(b, 10, 64)
+	num1, error1 := strconv.ParseFloat(a,64)
+	num2, error2 := strconv.ParseFloat(b,64)
 	if error1 != nil || error2 != nil {
 		c.String(400, "Invalid params a,b")
 		return
@@ -30,8 +30,8 @@ func Restar(c *gin.Context) {
 		c.String(400, "Missing params a,b")
 		return
 	}
-	num1, error1 := strconv.ParseInt(a, 10, 64)
-	num2, error2 := strconv.ParseInt(b, 10, 64)
+	num1, error1 := strconv.ParseFloat(a,64)
+	num2, error2 := strconv.ParseFloat(b,64)
 	if error1 != nil || error2 != nil {
 		c.String(400, "Invalid params a,b")
 		return
@@ -48,8 +48,8 @@ func Multiplicar(c *gin.Context) {
 		c.String(400, "Missing params a,b")
 		return
 	}
-	num1, error1 := strconv.ParseInt(a, 10, 64)
-	num2, error2 := strconv.ParseInt(b, 10, 64)
+	num1, error1 := strconv.ParseFloat(a,64)
+	num2, error2 := strconv.ParseFloat(b,64)
 	if error1 != nil || error2 != nil {
 		c.String(400, "Invalid params a,b")
 		return
@@ -66,8 +66,8 @@ func Dividir(c *gin.Context) {
 		c.String(400, "Missing params a,b")
 		return
 	}
-	num1, error1 := strconv.ParseInt(a, 10, 64)
-	num2, error2 := strconv.ParseInt(b, 10, 64)
+	num1, error1 := strconv.ParseFloat(a,64)
+	num2, error2 := strconv.ParseFloat(b,64)
 	if error1 != nil || error2 != nil {
 		c.String(400, "Invalid params a,b")
 		return
